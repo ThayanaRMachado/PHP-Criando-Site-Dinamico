@@ -34,6 +34,7 @@
 		</div><!--center-->
 	</header>
 	<section class="banner-principal">
+		<div class="overlay"></div><!--overlay - vai ter opacidade dem cima da imagem.-->
 		<div class="center">
 			<form>
 				<h2>Qual o seu melho e-mail?</h2>
