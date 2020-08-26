@@ -272,7 +272,7 @@ Para arrumar scroll-x do IE e EDGE.
 */
 
 html,body{
-	height: 100%;
+	overflow-x: hidden;
 }
 
 section.erro-404 h2{
