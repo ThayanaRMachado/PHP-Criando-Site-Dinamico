@@ -272,7 +272,6 @@ Para arrumar scroll-x do IE e EDGE.
 */
 
 html,body{
-	overflow-x: hidden;
 	height: 100%;
 }
 

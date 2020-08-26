@@ -16,8 +16,8 @@
 	<?php
 		$url = isset($_GET['url']) ? $_GET['url'] : 'home';
 		switch ($url) {
-			case 'sobre':
-				echo '<target target="sobre" />';
+			case 'depoimentos':
+				echo '<target target="depoimentos" />';
 				break;
 
 			case 'servicos':
@@ -32,7 +32,7 @@
 			<nav class="desktop right"><!--Navegação p/ desktop.Dependendo do tamanho da tela, ela ficará escondida e a mobile aparece.-->
 				<ul>
 					<li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+					<li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
 				</ul>
@@ -44,7 +44,7 @@
 			 	</div>
 				<ul>
 					<li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-					<li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+					<li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
 					<li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
 				</ul>
@@ -55,11 +55,11 @@
 
 	<?php
 
-		if (file_exists('pages/'.$url.'.php')) {
+		if(file_exists('pages/'.$url.'.php')){
 			include('pages/'.$url.'.php');
 		}else{
 			//Podemos fazer o que quiser, pois a página não existe.
-			if ($url != 'sobre' && $url != 'servicos') {
+			if($url != 'depoimentos' && $url != 'servicos'){
 				$pagina404 = true;
 				include('pages/404.php');
 			}else{
