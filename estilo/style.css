@@ -358,6 +358,28 @@ section.erro-404 a{
 	cursor: pointer;
 }
 
+.bullets{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);/*Para deixar centralizado no eixo horizontal.*/
+	z-index: 5;
+}
+
+.bullets span{
+	margin:0 10px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #444;
+}
+
+.bullets span.active-slider{
+	background: white;
+}
+
 /*Início responsividade -descricao-autor*/
 /*Se for <= do q/ 768px, aplica esse estilo ao responsivo. Sempre tem q/ ir do > p/ o <.*/
 @media screen and(max-width: 768px){/*Configurações ideais de um celular até um tablet.*/
