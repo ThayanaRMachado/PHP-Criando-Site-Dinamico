@@ -88,7 +88,7 @@
 	<?php
 		if($url == 'contato'){//Para não carregar nas outras páginas.
 	?>
-	
 	<?php } ?>
+	<script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
 </body>
 </html>
