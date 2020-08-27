@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--tag do design responsivo--> 
 	<meta name="keywords" content="palavras-chave,do,meu,site"><!--Palavras chave do site-->
 	<meta name="description" content="Descrição do meu website"><!--Para o google saber a descrição do site.-->
+	<link rel="icon" href="<?php echo INCLUDE_PATH; ?>favicon.ico" type="image/x-icon" />
 	<meta charset="utf-8" />
 </head>
 <body>
