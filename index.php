@@ -76,7 +76,11 @@
 	<script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
 	<!--/Aqui vão ficar todos os códios javaScript.-->
 	<script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script><!--está importando arquivos externos-->
-
+	<?php
+		if($url == 'home' || $url == ''){
+	?>
+	<script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
+	<?php } ?>
 	<?php
 		if($url == 'contato'){//Para não carregar nas outras páginas.
 	?>

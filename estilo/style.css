@@ -91,12 +91,21 @@ nav.desktop a:hover{
 }
 
 /*banner-principal*/
-section.banner-principal{
+section.banner-container{
 	width: 100%;
 	height: 600px;
-	background-image: url('../images/bg-form.jpg');
-	background-size: cover;
 	position: relative;
+}
+
+.banner-single{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
 }
 
 .overlay{
@@ -105,15 +114,15 @@ section.banner-principal{
 	top: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 1;/*Esse vai antes do formulário.Qto. maior o nº, mais acima vai ficar.*/
+	z-index: 2;/*Esse vai antes do formulário.Qto. maior o nº, mais acima vai ficar.*/
 	background-color: rgba(51,51,51,0.7);/*Para dar opacidade à imagem.*/
 }
 /*Fim-banner-principal*/
 /*Formulário*/
-section.banner-principal form{
+section.banner-container form{
 	width: 93%;
 	max-width: 600px;
-	z-index: 2;/*Esse vai depois do formulário.Qto. maior o nº, mais acima vai ficar.*/
+	z-index: 3;/*Esse vai depois do formulário.Qto. maior o nº, mais acima vai ficar.*/
 	position: absolute;
 	left: 50%;/*Ajuda na centralização do formulário*/
 	top: 50%;/*Ajuda na centralização do formulário*/
@@ -121,14 +130,14 @@ section.banner-principal form{
 	-ms-transform:translate(-50%,-50%);
 }
 
-section.banner-principal form h2{
+section.banner-container form h2{
 	color: white;
 	font-weight: 300;
 	font-size: 30px;
 	text-align: center;
 }
 
-section.banner-principal form input[type=email]{
+section.banner-container form input[type=email]{
 	width: 100%;
 	height: 66px;
 	margin-top: 10px;
@@ -138,7 +147,7 @@ section.banner-principal form input[type=email]{
 	padding-left: 10px;
 }
 
-section.banner-principal form input[type=submit]{
+section.banner-container form input[type=submit]{
 	width: 100%;
 	height: 66px;
 	margin-top: 10px;
