@@ -1,4 +1,4 @@
-$(function(){//Aqui vai todo o código Javascript
+$(function(){	//Aqui vai todo o código Javascript
 	//Esta tag vem do style.css
 	$('nav.mobile').click(function(){
 		var listaMenu = $('nav.mobile ul');
@@ -16,7 +16,7 @@ $(function(){//Aqui vai todo o código Javascript
 		}
 
 	})
-});
+
 
 if($('target').length > 0){
 		//O elemento existe, portanto precisamos dar o scroll em algum elemento.
@@ -26,3 +26,24 @@ if($('target').length > 0){
 
 		$('html,body').animate({scrollTop:divScroll},2000);
 	}
+
+	carregarDinamico();
+	function carregarDinamico(){
+		$('[realtime]').click(function(){
+			var pagina = $(this).attr('realtime');
+			$('.container-principal').hide();
+			$('.container-principal').load(include_path+'pages/'+pagina+'.php');
+			
+			setTimeout(function(){
+				initialize();
+				addMarker(-27.609959,-48.576585,'',"Minha casa",undefined,false);
+
+			},1000);
+
+			$('.container-principal').fadeIn(1000);
+
+			return false;
+		})
+	}
+
+});

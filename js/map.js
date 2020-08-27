@@ -72,5 +72,10 @@ var map;
 	    	}
 	}
 
+	
+
+$(function(){
+
 	initialize();
 	addMarker(-27.609959,-48.576585,'',"Minha casa", undefined, false);//O Minha casa no mapa fica escondido, só aparece qdo clicar em cima do balão de localização. 
+})
